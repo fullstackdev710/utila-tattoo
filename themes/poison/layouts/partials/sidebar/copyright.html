@@ -1,0 +1,29 @@
+<style>
+    .footer-menu-item {
+        display: inline-block;
+        margin: 0px;
+        font-size: .7em;
+    }
+    .footer-menu-item a {
+        color: var(--sidebar-p-color);
+        text-decoration: none;
+    }
+    .footer-menu-item a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; {{ now.Format "2006"}} {{ or .Site.Language.Params.Author.name .Site.Title }}. All rights reserved.
+
+    <ul style="padding-left: 0px; display: flex;  flex-direction: column; row-gap: 10px;">    
+        <li class="footer-menu-item">
+            <a href="/privacy">Privacy Policy</a>
+        </li>    
+        <li class="footer-menu-item">
+            <a href="/terms">Terms and Conditions</a>
+        </li>
+    </ul>
+</p>

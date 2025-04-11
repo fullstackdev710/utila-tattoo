@@ -1,0 +1,61 @@
+{{ define "main" -}}
+  <style>
+    .mt-40 {
+      margin-top: 40px !important;
+    }
+    .social-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      margin-top: 20px;
+      column-gap: 40px;
+    }
+    .social {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      margin-top: 20px;
+      column-gap: 10px;
+    }
+  </style>
+  <div class="post">
+    {{ partial "post/info.html" . }}
+
+    {{ .Content }}
+
+    <div class="mt-40 social-wrapper">
+      {{ if .Site.Params.email_url }}
+      <a target="_blank" class="social" title="Email" href="{{ .Site.Params.email_url }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+              <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+        </svg>
+        utilatattoo1@gmail.com
+      </a>
+      {{ end }}
+      {{ if .Site.Params.phone_url }}
+          <a class="social" title="Phone" href="tel:{{ .Site.Params.phone_url }}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 512 512">
+                  <path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+              </svg>
+              514 8786 2756
+          </a>
+      {{ end }}
+    </div>
+
+    <p class="mt-40"><strong>Location</strong></p>
+    <p>We are located centrally on Main Street Utila, Bay Island, Honduras next to the Utilla Remax across from Huffies</p>
+
+  {{ if (.Site.Params.listmonk) }}
+    {{ partial "post/listmonk_email_newsletters.html" . }}
+  {{ end }}
+  {{ partial "post/navigation.html" . }}
+  {{ if or (.Site.Params.remark42) (.Site.Config.Services.Disqus.Shortname) }}
+    {{ partial "post/comments.html" . }}
+  {{ end }}
+</div>
+{{- end }}
+{{ define "sidebar" }}
+  {{ if and (not .Params.hideToc) (not .Site.Params.hideToc) }}
+    {{ partial "table_of_contents.html" . }}
+  {{ end }}
+{{ end }}

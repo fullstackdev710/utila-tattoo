@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Utila Tatto</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content in Home on Utila Tatto</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Apr 2025 19:27:04 +1000</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terms</title>
+      <link>//localhost:1313/terms/</link>
+      <pubDate>Wed, 09 Apr 2025 19:27:04 +1000</pubDate>
+      <guid>//localhost:1313/terms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Privacy</title>
+      <link>//localhost:1313/privacy/</link>
+      <pubDate>Wed, 09 Apr 2025 19:26:51 +1000</pubDate>
+      <guid>//localhost:1313/privacy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>//localhost:1313/contact/</link>
+      <pubDate>Wed, 09 Apr 2025 19:26:41 +1000</pubDate>
+      <guid>//localhost:1313/contact/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/img/contact_image.webp&#34; alt=&#34;About&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gallery</title>
+      <link>//localhost:1313/gallery/</link>
+      <pubDate>Wed, 09 Apr 2025 19:26:26 +1000</pubDate>
+      <guid>//localhost:1313/gallery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Wed, 09 Apr 2025 17:36:42 +1000</pubDate>
+      <guid>//localhost:1313/about/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/img/about-hero.webp&#34; alt=&#34;About&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in enim nibh. Vivamus tincidunt odio vitae blandit accumsan. Pellentesque egestas ultrices nulla, in dapibus orci viverra lobortis. Suspendisse vel leo elit. Suspendisse potenti. Curabitur est nisi, mattis ut ligula vel, euismod ullamcorper massa. Aenean commodo vulputate sem, at tincidunt nisl pretium et. Curabitur efficitur pellentesque pretium. Phasellus vitae ipsum eleifend, mattis sem a, varius sem.&lt;/p&gt;&#xA;&lt;p&gt;Vivamus maximus lacus lacus, ac ornare dolor sollicitudin et. Quisque at nisi sit amet elit fringilla venenatis ut id risus. Aliquam sapien justo, viverra vel nibh a, varius porttitor magna. Curabitur fringilla, libero a mollis molestie, eros lorem pretium metus, et luctus neque lorem eget nibh. Sed euismod purus urna, ut tincidunt metus ultricies at. Sed fermentum nisi ac enim suscipit posuere. Quisque pellentesque elit eget auctor aliquet. Phasellus pulvinar faucibus nibh a accumsan. Donec risus augue, dapibus sit amet diam vel, ultricies placerat erat.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

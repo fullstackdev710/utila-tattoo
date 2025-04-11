@@ -1,0 +1,61 @@
+{{ define "main" -}}
+<div class="post gallery">
+  <style>
+    .video-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .video-gallery img {
+      width: 250px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .video-gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+
+  {{ partial "post/info.html" . }}
+  {{ .Content }}
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+  <div class="video-gallery">
+    {{ range .Resources.Match "*.mp4" }}
+      <a href="{{ .RelPermalink }}" class="glightbox" data-type="video">
+        <video style="width: 200px; margin: 10px;" controls>
+          <source src="{{ .RelPermalink }}" type="video/mp4">
+        </video>
+      </a>
+    {{ end }}
+
+    {{ range .Resources.Match "*.webp" }}
+    <a href="{{ .RelPermalink }}" class="glightbox" data-type="image">
+        <img src="{{ .RelPermalink }}" alt="{{ .Name }}" style="width: 200px; margin: 10px;" />
+      </a>
+    {{ end }}
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  </script>
+
+  {{ if (.Site.Params.listmonk) }}
+    {{ partial "post/listmonk_email_newsletters.html" . }}
+  {{ end }}
+  {{ partial "post/navigation.html" . }}
+  {{ if or (.Site.Params.remark42) (.Site.Config.Services.Disqus.Shortname) }}
+    {{ partial "post/comments.html" . }}
+  {{ end }}
+</div>
+{{- end }}
+{{ define "sidebar" }}
+  {{ if and (not .Params.hideToc) (not .Site.Params.hideToc) }}
+    {{ partial "table_of_contents.html" . }}
+  {{ end }}
+{{ end }}
