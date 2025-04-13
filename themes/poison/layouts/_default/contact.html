@@ -3,14 +3,14 @@
     .mt-40 {
       margin-top: 40px !important;
     }
-    .social-wrapper {
+    .contact-social.social-wrapper {
       display: flex;
       align-items: center;
       justify-content: start;
       margin-top: 20px;
       column-gap: 40px;
     }
-    .social {
+    .contact-social .social {
       display: flex;
       align-items: center;
       text-decoration: none;
@@ -23,7 +23,7 @@
 
     {{ .Content }}
 
-    <div class="mt-40 social-wrapper">
+    <div class="mt-40 social-wrapper contact-social">
       {{ if .Site.Params.email_url }}
       <a target="_blank" class="social" title="Email" href="{{ .Site.Params.email_url }}">
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
@@ -48,7 +48,7 @@
   {{ if (.Site.Params.listmonk) }}
     {{ partial "post/listmonk_email_newsletters.html" . }}
   {{ end }}
-  {{ partial "post/navigation.html" . }}
+  <!-- {{ partial "post/navigation.html" . }} -->
   {{ if or (.Site.Params.remark42) (.Site.Config.Services.Disqus.Shortname) }}
     {{ partial "post/comments.html" . }}
   {{ end }}

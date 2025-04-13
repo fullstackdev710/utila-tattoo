@@ -4,7 +4,6 @@ title: 'About'
 draft: false
 ---
 
-![About](/img/about-hero.webp)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in enim nibh. Vivamus tincidunt odio vitae blandit accumsan. Pellentesque egestas ultrices nulla, in dapibus orci viverra lobortis. Suspendisse vel leo elit. Suspendisse potenti. Curabitur est nisi, mattis ut ligula vel, euismod ullamcorper massa. Aenean commodo vulputate sem, at tincidunt nisl pretium et. Curabitur efficitur pellentesque pretium. Phasellus vitae ipsum eleifend, mattis sem a, varius sem.
 

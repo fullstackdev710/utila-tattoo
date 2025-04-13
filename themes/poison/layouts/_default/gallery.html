@@ -23,13 +23,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
   <div class="video-gallery">
-    {{ range .Resources.Match "*.mp4" }}
+    <!-- {{ range .Resources.Match "*.mp4" }}
       <a href="{{ .RelPermalink }}" class="glightbox" data-type="video">
         <video style="width: 200px; margin: 10px;" controls>
           <source src="{{ .RelPermalink }}" type="video/mp4">
         </video>
       </a>
-    {{ end }}
+    {{ end }} -->
 
     {{ range .Resources.Match "*.webp" }}
     <a href="{{ .RelPermalink }}" class="glightbox" data-type="image">
@@ -48,7 +48,7 @@
   {{ if (.Site.Params.listmonk) }}
     {{ partial "post/listmonk_email_newsletters.html" . }}
   {{ end }}
-  {{ partial "post/navigation.html" . }}
+  <!-- {{ partial "post/navigation.html" . }} -->
   {{ if or (.Site.Params.remark42) (.Site.Config.Services.Disqus.Shortname) }}
     {{ partial "post/comments.html" . }}
   {{ end }}
